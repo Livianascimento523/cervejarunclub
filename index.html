@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cerveja Run Clube — Russas</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -169,6 +170,56 @@
     .nav-links { display: none; }
   }
 </style>
+
+<style>
+.menu-btn{display:none;color:white;font-size:1.5rem;cursor:pointer}
+.back-top{
+position:fixed;bottom:20px;right:20px;
+width:50px;height:50px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+background:#7AC620;color:#111;
+cursor:pointer;z-index:1000;
+box-shadow:0 0 20px rgba(122,198,32,.3)
+}
+.reveal{
+opacity:0;
+transform:translateY(30px);
+transition:all .7s ease;
+}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+.dica-icon{
+width:55px;height:55px;border-radius:12px;
+display:flex;align-items:center;justify-content:center;
+background:rgba(122,198,32,.1);
+color:#7AC620;
+font-size:1.3rem;
+}
+@media(max-width:768px){
+.menu-btn{display:block}
+.nav-links.open{
+display:flex!important;
+position:absolute;
+top:64px;
+left:0;right:0;
+flex-direction:column;
+background:#111;
+padding:1rem;
+}
+}
+.footer-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.footer-list i{
+    width:18px;
+    color:var(--green);
+}
+</style>
 </head>
 <body>
 
@@ -187,8 +238,7 @@
     <li><a href="#dicas">Dicas</a></li>
     <li><a href="#galeria">Galeria</a></li>
     <li><a href="#inscricao">Entrar no Clube</a></li>
-  </ul>
-</nav>
+  </ul><div class="menu-btn"><i class="fa-solid fa-bars"></i></div></nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -245,7 +295,7 @@
         <div><div class="treino-info-label">Distância</div><div class="treino-info-val">8 <span class="highlight" style="font-size:1rem">KM</span></div></div>
         <div><div class="treino-info-label">Ponto de encontro</div><div class="treino-info-val" style="font-size:1.1rem">Praça Matriz</div></div>
         <div><div class="treino-info-label">Ritmo alvo</div><div class="treino-info-val">6:30 <span class="highlight" style="font-size:1rem">/km</span></div></div>
-        <div><div class="treino-info-label">Pós-corrida</div><div class="treino-info-val" style="font-size:1.1rem; color: var(--yellow)">🍺 CERVA!</div></div>
+        <div><div class="treino-info-label">Pós-corrida</div><div class="treino-info-val" style="font-size:1.1rem; color: var(--yellow)"><i class='fa-solid fa-beer-mug-empty'></i> CERVA!</div></div>
       </div>
       <p class="treino-desc">Trajeto clássico pela orla da cidade, passando pelo centro histórico. Percurso flat e perfeito pra todos os ritmos. Traga seu pace, sua energia — e espaço no estômago pra depois.</p>
     </div>
@@ -308,12 +358,12 @@
     <div class="section-tag">Do treinador</div>
     <h2 class="section-title">Dicas de <span>Treino</span></h2>
     <div class="dicas-grid">
-      <div class="dica-card"><div class="dica-num">01</div><div class="dica-icon">🌅</div><div class="dica-title">Treino no Calor do Sertão</div><div class="dica-text">Corra cedo — antes das 7h ou após as 17h. No calor de Russas, hidratação é lei: beba 500ml nas 2h antes e leve água mesmo em percursos curtos. O ritmo cai 10-15% no calor, e tá ótimo.</div></div>
-      <div class="dica-card"><div class="dica-num">02</div><div class="dica-icon">💧</div><div class="dica-title">Hidratação Correta</div><div class="dica-text">Para corridas acima de 60 min, não espere a sede. Beba a cada 15-20 minutos. Isotônico entra nas corridas maiores de 10km. Atenção: a cerveja pós-corrida não conta como hidratação (infelizmente).</div></div>
-      <div class="dica-card"><div class="dica-num">03</div><div class="dica-icon">👟</div><div class="dica-title">Cadência e Passada</div><div class="dica-text">Mire em 170-180 passadas por minuto. Passadas mais curtas e rápidas machucam menos e são mais eficientes. Teste com um metrônomo ou playlist no ritmo certo nos treinos de semana.</div></div>
-      <div class="dica-card"><div class="dica-num">04</div><div class="dica-icon">📈</div><div class="dica-title">Regra dos 10%</div><div class="dica-text">Nunca aumente seu volume semanal mais de 10%. Lesão é o maior inimigo de quem quer melhorar. Consistência bate intensidade no longo prazo — um mês de treino regular vale mais que uma semana heróica.</div></div>
-      <div class="dica-card"><div class="dica-num">05</div><div class="dica-icon">😴</div><div class="dica-title">Recuperação é Treino</div><div class="dica-text">Você não melhora correndo — você melhora descansando depois de correr. 7-8h de sono, dia de folga após treinos pesados e alimentação pós-corrida rica em proteína e carboidrato são obrigatórios.</div></div>
-      <div class="dica-card"><div class="dica-num">06</div><div class="dica-icon">🎯</div><div class="dica-title">Defina sua Corrida do Ano</div><div class="dica-text">Escolha UMA corrida principal e monte seu ciclo em torno dela. Corrida de foco + data no calendário = motivação que sustenta nos dias ruins. O clube tem parceria em várias provas regionais!</div></div>
+      <div class="dica-card"><div class="dica-num">01</div><div class="dica-icon"><i class="fa-solid fa-sun"></i></div><div class="dica-title">Treino no Calor do Sertão</div><div class="dica-text">Corra cedo — antes das 7h ou após as 17h. No calor de Russas, hidratação é lei: beba 500ml nas 2h antes e leve água mesmo em percursos curtos. O ritmo cai 10-15% no calor, e tá ótimo.</div></div>
+      <div class="dica-card"><div class="dica-num">02</div><div class="dica-icon"><i class='fa-solid fa-droplet'></i></div><div class="dica-title">Hidratação Correta</div><div class="dica-text">Para corridas acima de 60 min, não espere a sede. Beba a cada 15-20 minutos. Isotônico entra nas corridas maiores de 10km. Atenção: a cerveja pós-corrida não conta como hidratação (infelizmente).</div></div>
+      <div class="dica-card"><div class="dica-num">03</div><div class="dica-icon"><i class='fa-solid fa-shoe-prints'></i></div><div class="dica-title">Cadência e Passada</div><div class="dica-text">Mire em 170-180 passadas por minuto. Passadas mais curtas e rápidas machucam menos e são mais eficientes. Teste com um metrônomo ou playlist no ritmo certo nos treinos de semana.</div></div>
+      <div class="dica-card"><div class="dica-num">04</div><div class="dica-icon"><i class='fa-solid fa-chart-line'></i></div><div class="dica-title">Regra dos 10%</div><div class="dica-text">Nunca aumente seu volume semanal mais de 10%. Lesão é o maior inimigo de quem quer melhorar. Consistência bate intensidade no longo prazo — um mês de treino regular vale mais que uma semana heróica.</div></div>
+      <div class="dica-card"><div class="dica-num">05</div><div class="dica-icon"><i class='fa-solid fa-bed'></i></div><div class="dica-title">Recuperação é Treino</div><div class="dica-text">Você não melhora correndo — você melhora descansando depois de correr. 7-8h de sono, dia de folga após treinos pesados e alimentação pós-corrida rica em proteína e carboidrato são obrigatórios.</div></div>
+      <div class="dica-card"><div class="dica-num">06</div><div class="dica-icon"><i class='fa-solid fa-bullseye'></i></div><div class="dica-title">Defina sua Corrida do Ano</div><div class="dica-text">Escolha UMA corrida principal e monte seu ciclo em torno dela. Corrida de foco + data no calendário = motivação que sustenta nos dias ruins. O clube tem parceria em várias provas regionais!</div></div>
     </div>
   </div>
 </section>
@@ -369,18 +419,68 @@
     <div>
       <div class="footer-heading">Contato</div>
       <ul class="footer-list">
-        <li>📍 Russas — Ceará</li>
-        <li>📸 @_cervejarunclube</li>
-        <li>🕔 Treinos: Ter / Qui / Sáb</li>
-        <li>⏰ Largada: 05:30h</li>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          Russas — Ceará
+        </li>
+
+        <li>
+          <i class="fa-brands fa-instagram"></i>
+          @_cervejarunclube
+        </li>
+
+        <li>
+          <i class="fa-regular fa-calendar"></i>
+          Treinos: Ter / Qui / Sáb
+        </li>
+
+        <li>
+          <i class="fa-regular fa-clock"></i>
+          Largada: 05:30h
+        </li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Cerveja Run Clube — Russas, Ceará</span>
+    <span>© 2026 Cerveja Run Clube — Russas, Ceará</span>
     <a href="https://instagram.com/_cervejarunclube" target="_blank" class="insta">@_cervejarunclube ↗</a>
   </div>
 </footer>
 
+
+<div class='back-top'><i class="fa-solid fa-arrow-up"></i></div>
+<script>
+const btn=document.querySelector(".menu-btn");
+const nav=document.querySelector(".nav-links");
+btn.onclick=()=>nav.classList.toggle("open");
+
+document.querySelectorAll("section").forEach(el=>el.classList.add("reveal"));
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add("active");
+})
+})
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))
+
+document.querySelector(".back-top").onclick=()=>{
+window.scrollTo({top:0,behavior:"smooth"})
+}
+
+document.querySelectorAll('.stat-num').forEach(counter=>{
+const target=parseInt(counter.innerText.replace(/\D/g,''))||0;
+let count=0;
+function update(){
+count+=target/80;
+if(count<target){
+counter.innerText=Math.floor(count)+"+"
+requestAnimationFrame(update)
+}else{
+counter.innerText=target+"+"
+}
+}
+if(target) update();
+})
+</script>
 </body>
 </html>
